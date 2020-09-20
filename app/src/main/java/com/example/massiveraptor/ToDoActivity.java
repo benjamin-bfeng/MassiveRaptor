@@ -69,6 +69,7 @@ public class ToDoActivity extends AppCompatActivity {
         }
         cursor.close();
         db.close();
+        updateUI();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

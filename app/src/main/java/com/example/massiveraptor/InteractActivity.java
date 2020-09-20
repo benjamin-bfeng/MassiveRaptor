@@ -22,4 +22,9 @@ public class InteractActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ToDoActivity.class);
         startActivity(intent);
     }
+
+    public void historyActivity(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
+    }
 }

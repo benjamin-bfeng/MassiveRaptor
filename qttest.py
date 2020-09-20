@@ -26,7 +26,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         board.digital[counter+1].write(1)
         self.inputBox.clear()
 
-        img = "step{}.png".format(counter+1)
+        img = "step{}.png".format(counter)
         pixmap = QPixmap(img)
         self.picLabel.setPixmap(pixmap)
 
@@ -40,7 +40,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         counter = counter - 1
         self.count.setText(str(counter))
 
-        img = "step{}.png".format(counter+1)
+        img = "step{}.png".format(counter)
         pixmap = QPixmap(img)
         self.picLabel.setPixmap(pixmap)
 

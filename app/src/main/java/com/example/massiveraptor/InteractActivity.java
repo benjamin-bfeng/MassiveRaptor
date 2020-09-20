@@ -13,18 +13,18 @@ public class InteractActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interact);
     }
-
-    public void sleepActivity(View view) {
-        Intent intent = new Intent(this, SleepActivity.class);
-        startActivity(intent);
-    }
     public void toDoActivity(View view) {
         Intent intent = new Intent(this, ToDoActivity.class);
+        startActivity(intent);
+    }
+    /*
+    public void sleepActivity(View view) {
+        Intent intent = new Intent(this, SleepActivity.class);
         startActivity(intent);
     }
 
     public void historyActivity(View view) {
         Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
-    }
+    }*/
 }

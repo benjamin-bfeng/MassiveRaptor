@@ -1,4 +1,4 @@
-package com.example.massiveraptor;
+/*package com.example.massiveraptor;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -81,4 +81,4 @@ public class mDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-}
+}*/

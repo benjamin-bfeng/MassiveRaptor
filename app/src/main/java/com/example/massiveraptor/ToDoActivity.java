@@ -1,7 +1,9 @@
 package com.example.massiveraptor;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -24,7 +26,11 @@ public class ToDoActivity extends AppCompatActivity {
     private TaskDbHelper mHelper;
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
-
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String treeNumber = "step1";
+    public static final int num = 1;
+    private String image;
+    private int number;
     private void updateUI() {
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = mHelper.getReadableDatabase();
@@ -89,12 +95,19 @@ public class ToDoActivity extends AppCompatActivity {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Congrats!")
                 .setMessage("You finished a task. Good Job!")
-                // add points to life
                 .setNegativeButton("Ok", null)
                 .create();
                 dialog.show();
+        SharedPreferences sb = getApplicationContext().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+        number = sb.getInt("textView", 0);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        number++;
+        editor.putInt("textView", number );
+        editor.commit();
 
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

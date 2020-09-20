@@ -10,23 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".HistoryActivity"
-            android:label="History"
-            android:parentActivityName=".InteractActivity">
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".InteractActivity" />
-        </activity>
-        <activity
             android:name=".ToDoActivity"
             android:label="To Do List"
-            android:parentActivityName=".InteractActivity">
+            android:parentActivityName=".MainActivity">
             //android:theme="@style/AppTheme.NoActionBar" >
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".InteractActivity" />
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".SleepActivity"
@@ -48,7 +39,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="Tamagrowchi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
